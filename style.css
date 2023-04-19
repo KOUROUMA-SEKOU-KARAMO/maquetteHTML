@@ -1,0 +1,309 @@
+:root{
+    --colorfont:rgb(128, 0, 128);
+    --colorWhite:white;
+    --colorBlack: #000;
+    --colorHoverBtnLink:#eeeeee85;
+}
+@font-face {
+    font-family: "MontSerrat";
+    src: url(./assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf);
+}
+*, html,body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ***************** Style pour la navbar *****************  */
+
+nav {
+ width: 100vw;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav ul {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     width: 100%;
+     /* margin-bottom: 20px; */
+}
+
+nav ul li{
+     list-style-type: none;
+     /* padding: 10px; */
+     padding: 17px;
+     
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: var(--colorBlack);
+    font-family: "MontSerrat",sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    /* display: inline-block;
+    width: 100%;
+    height: 100%; */
+
+}
+
+nav ul .langue{
+     background: #eee;
+     border-radius: 60px;
+     padding: 7px 15px ;
+}
+
+nav ul li:hover {
+ border-top:8px solid  var(--colorfont);
+}
+
+
+
+
+/* ************** Style header ******** */
+
+header{
+    width: 100vw;
+    height: 671px;
+    background:url("./assets/img/bg.jpg") no-repeat center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+header h1{
+    color: var(--colorWhite);
+    font-family: "MontSerrat", sans-serif;
+    margin: 15px auto;
+    text-transform: uppercase;
+}
+
+
+header a {
+ color: var(--colorWhite);
+ text-transform: uppercase;
+ font-size: 1rem;
+ font-weight: bold;
+ text-decoration: none;
+ letter-spacing: 3px;
+ display: block;
+ /* background: black; */
+ padding: 10px 20px;
+  border: 2px solid var(--colorWhite);
+ font-family: "MontSerrat", sans-serif;
+/* transition: .5s ease-in-out; */
+}
+
+header a:hover{
+  background: #cfcece5a;
+  /* color:var(--colorBlack); */
+}
+
+
+/* ************************ Style section Text ************* */
+
+.sectionText{
+    width: 100vw;
+    height:191px;
+    /* margin: 40px auto; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background:teal; */
+}
+
+.sectionText p{
+    color: var(--colorBlack);
+    font-family: "MontSerrat",sans-serif;
+    font-weight: bold;
+    text-align: center;
+    margin: 0 auto;
+    width: 70%;
+}
+
+
+/* ****************** Style Gallery **** */
+.section-gallery{
+    width: 100vw;
+    padding: 50px 0;
+    display: grid;
+    /* grid-template-rows: ; */
+    background: var(--colorBlack);
+}
+.container-gallery{
+    width: 80%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3,32%);
+    gap:10px;
+    
+}
+
+.container-gallery .card{
+    /* box-shadow: 2px 3px 2px #000; */
+    /* border: 2px solid #eee; */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-gallery .card .card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 0;
+
+}
+
+.container-gallery .card h2{
+    font-size: 1.2rem;
+    font-family: "MontSerrat" ,sans-serif;
+    color: var(--colorWhite)
+}
+
+
+.container-gallery .card .card-body p{
+    color:var(--colorWhite);
+    margin: 6px 0 ;
+    text-align: center;  
+    font-family: "MontSerrat" , sans-serif;
+    font-weight: bold;
+}
+
+.container-gallery .card .card-footer{
+    /* background:#eee; */
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container-gallery .card .card-footer a {
+   color:var(--colorWhite);
+   /* background: #eee; */
+   display: block;
+   padding:6px 20px;
+   border: 1px solid var(--colorWhite);
+   text-decoration: none;
+   font-weight: bold;
+   font-family: "MontSerrat",sans-serif;
+}
+.container-gallery .card .card-footer a:hover {
+ background: var(--colorHoverBtnLink);
+}
+
+
+
+/* ************** Style newPapers  */
+
+
+.section-new-campus{
+    width: 100vw;
+    height: 150px;
+    /* background: teal; */
+    margin:10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.section-new-campus .container-new-campus{
+     width: 60%;
+     margin: 0 auto;
+     display: flex;
+     justify-content:space-around;
+     align-items: center;
+}
+
+.section-new-campus .container-new-campus .text{
+     width: 60%;
+     margin: 0 auto;
+     display: flex;
+     justify-content:flex-start;
+     flex-direction:column;
+}
+.section-new-campus .container-new-campus .text h4{
+   color: var(--colorBlack);
+   font-family: "MontSerrat", sans-serif;
+   margin: 0 0  10px 0;
+   letter-spacing: 6px;
+   text-transform: uppercase;
+}
+.section-new-campus .container-new-campus .text p{
+   color: var(--colorBlack);
+   font-family: "MontSerrat", sans-serif;
+   margin: 0 0  10px 0;
+   font-weight: bold;
+}
+.section-new-campus .container-new-campus a{
+   color: var(--colorBlack);
+   font-family: "MontSerrat", sans-serif;
+   font-weight: bold;
+   display: inline-block;
+   border: 1px solid var(--colorBlack);
+   text-decoration: none;
+   text-align: center;
+   padding:3px 10px;
+   text-transform: uppercase;
+   /* background: #eee; */
+}
+.section-new-campus .container-new-campus a:hover{
+    background:var(--colorHoverBtnLink);
+ 
+}
+
+
+
+/* ******* Style Inauguration ********* */
+
+
+.section-inauguration{
+    /* background: #000; */
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-inauguration{
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(3,32%);
+    gap:30px;
+    margin: 10px auto;
+    display: flex;
+}
+.container-inauguration .card {
+   /* margin:0 0px; */
+   box-shadow: 2px 2px 3px #eee;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+.container-inauguration .card .card-header {
+   /* margin:0 0px; */
+   box-shadow: 2px 2px 3px #eee;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+.container-inauguration .card .card-body {
+   /* margin:0 0px; */
+   box-shadow: 2px 2px 3px #eee;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+.container-inauguration .card .card-header{
+    
+}
+
