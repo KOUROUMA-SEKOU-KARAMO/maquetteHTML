@@ -14,6 +14,10 @@
     box-sizing: border-box;
 }
 
+body{
+    max-width: 100vw!important;
+    overflow-x: hidden;
+}
 /* ***************** Style pour la navbar *****************  */
 
 nav {
@@ -28,39 +32,49 @@ nav ul {
      display: flex;
      justify-content: center;
      align-items: center;
-     width: 100%;
-     /* margin-bottom: 20px; */
+     width:90%;
+     position: relative;
+     margin: 0 auto;
 }
 
 nav ul li{
      list-style-type: none;
      /* padding: 10px; */
-     padding: 17px;
-     
+     margin: 17px 10px;
+     position: relative;
 }
+
 
 nav ul li a{
     text-decoration: none;
     color: var(--colorBlack);
     font-family: "MontSerrat",sans-serif;
-    font-weight: bold;
+    font-weight: 900;
     text-transform: uppercase;
-    /* display: inline-block;
-    width: 100%;
-    height: 100%; */
+    font-weight: 900px;
+
 
 }
 
 nav ul .langue{
      background: #eee;
      border-radius: 60px;
-     padding: 7px 15px ;
+     padding: 7px 10px ;
 }
 
-nav ul li:hover {
- border-top:8px solid  var(--colorfont);
+nav ul li a:hover::before{
+    content:"";
+    border: 4px solid var(--colorfont);
+     display: block;
+     position: absolute;
+     width: 100%;
+     top:-24px;
+     color: var(--colorfont);
 }
 
+nav ul li:last-child:before:hover{
+  border: none;
+}
 
 
 
@@ -69,16 +83,17 @@ nav ul li:hover {
 header{
     width: 100vw;
     height: 671px;
-    background:url("./assets/img/bg.jpg") no-repeat center/cover;
+    background:url("./assets/img/bg.jpg") no-repeat center/cover fixed;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
 }
 header h1{
     color: var(--colorWhite);
     font-family: "MontSerrat", sans-serif;
-    margin: 15px auto;
+    margin: 30px auto;
     text-transform: uppercase;
 }
 
@@ -109,11 +124,12 @@ header a:hover{
 .sectionText{
     width: 100vw;
     height:191px;
-    /* margin: 40px auto; */
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background:teal; */
+
+    background: #f1f1f1;
+
 }
 
 .sectionText p{
@@ -122,6 +138,7 @@ header a:hover{
     font-weight: bold;
     text-align: center;
     margin: 0 auto;
+    line-height: 30px;
     width: 70%;
 }
 
@@ -206,15 +223,16 @@ header a:hover{
     width: 100vw;
     height: 150px;
     /* background: teal; */
-    margin:10px 0;
+    padding:40px 0;
     display: flex;
     justify-content: center;
     align-items: center;
+    background: #f1f1f1;
 
 }
 
 .section-new-campus .container-new-campus{
-     width: 60%;
+     width: 80%;
      margin: 0 auto;
      display: flex;
      justify-content:space-around;
@@ -266,44 +284,281 @@ header a:hover{
 .section-inauguration{
     /* background: #000; */
     width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding-top: 90px ;
+    padding-bottom: 200px;
+    background: #f1f1f1;
+
 }
 
 .container-inauguration{
-    width: 90%;
+    width: 80%;
     display: grid;
     grid-template-columns: repeat(3,32%);
     gap:30px;
     margin: 10px auto;
-    display: flex;
-}
-.container-inauguration .card {
-   /* margin:0 0px; */
-   box-shadow: 2px 2px 3px #eee;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-direction: column;
-}
-.container-inauguration .card .card-header {
-   /* margin:0 0px; */
-   box-shadow: 2px 2px 3px #eee;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-direction: column;
-}
-.container-inauguration .card .card-body {
-   /* margin:0 0px; */
-   box-shadow: 2px 2px 3px #eee;
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   flex-direction: column;
-}
-.container-inauguration .card .card-header{
-    
 }
 
+.container-inauguration  .card{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+    font-family: "MontSerrat";
+    font-weight: 800px;
+    position: relative;
+}
+
+.container-inauguration  .card-header{
+    width: 100%;
+}
+.container-inauguration  .card-header img{
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 1px 2px 1px 0px  rgb(255, 255, 255);
+
+}
+.container-inauguration  .card-body{
+    margin-top: 10px;
+    line-height:25px;
+    font-weight: 800px;
+}
+.container-inauguration  .card-footer{
+  position: absolute;
+  /* background:black; */
+  width: 100%;
+  bottom: -30px;
+}
+.container-inauguration  .card-footer a{
+    text-decoration: none;
+    color: var(--colorfont);
+    font-weight: 600;
+}
+.container-inauguration  .card-footer .fas{
+    margin-left: 10px;
+}
+
+/* **************** Style Links ***** */
+
+.section-infos-links{
+    margin: 80px 0 ;
+    width: 100vw;
+    /* border: 3px solid red; */
+    font-family: "MontSerrat" , sans-serif;
+    font-weight: bold;
+}
+
+ .container-links{
+    width: 80%;
+   display: grid;
+   grid-template-columns: repeat(4,1fr);
+   gap: 20px;
+    margin: 20px auto;
+    /* background:teal ;     */
+ }
+ .container-links li , .container-links a{
+   text-decoration: none;
+   list-style-type: none;
+   line-height: 30px;
+ }
+
+ .container-links h3{
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+ }
+ .container-links h4{
+    margin: 20px 0 0 0; 
+    font-weight: bold;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+ }
+ .container-links p{
+    line-height: 25px;
+ }
+ .container-links .fa-brands{
+    margin: 10px 10px ;
+    font-size: 20px;
+ }
+
+
+/* ********* Style Parteanereat **** */
+
+
+
+
+
+ .section-partenareat::before{
+  content:"";
+  border:1px solid #eee;
+   position: absolute;
+   width: 80%;
+   top:-30px;
+   /* margin:0 auto; */
+   /* right: 0; */
+   left: 50%;
+   transform: translateX(-50%);
+
+ }
+ .section-partenareat{
+    margin:  80px 0 0 0 ;
+    width: 100vw;
+    position: relative;
+ }
+
+ .container-partenareat{
+     width: 90%;
+      display: flex;
+    font-family: "MontSerrat" , sans-serif;
+    /* align-items: center; */
+    margin: 0 auto;
+    justify-content: space-between;
+ }
+
+ .container-partenareat .left{
+   font-weight: bold;
+   line-height: 20px;
+    
+ }
+ .container-partenareat h4{
+   margin-bottom: 20px;
+    
+ }
+ .container-partenareat .right{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    flex-grow: 1;
+ }
+ .container-partenareat .right img{
+    list-style-type: none;
+    margin: 0 5px;
+ }
+
+
+
+ /* **************** Style footer ****  */
+
+ footer{
+    width: 100vw;
+    margin: 20px 0 0 0 ;
+    font-family: "MontSerrat" , sans-serif;
+    background: #0c0c0c;
+ }
+
+ .container-footer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+    width: 100%;
+
+ }
+ .container-footer h2{
+   margin: 0 0 20px 0;
+   color: var(--colorWhite);
+   text-transform: uppercase;
+ }
+ .container-footer img{
+   margin: 0 10px;
+ }
+
+ .container-footer .logo{
+    display: flex;
+    flex-wrap:nowrap;
+ }
+
+
+
+
+
+
+
+
+
+
+ /* ************ Responsive *********** */
+
+@media screen and (max-width:888px){
+    nav ul li {
+        padding: 5px 3px;
+    }
+    nav ul li a{
+       padding: 0;
+       font-size: 14px;
+    }
+    nav ul .langue{
+        background: #eee;
+        border-radius: 60px;
+        padding: 3px 8px ;
+   }
+}
+
+
+@media screen and (max-width: 780px){
+    nav {
+        display: none;
+    }
+
+    header{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .container-gallery{
+        width: 80%;
+        margin: 0 auto;
+        display:block;     
+    }
+    .container-gallery .card{
+      margin: 40px 0;     
+    }
+
+    .section-new-campus .container-new-campus{
+        width: 80%;
+        margin: 0 auto;
+        display: flex;
+        justify-content:space-around;
+        align-items: center;
+        flex-direction: column;
+   }
+
+    .section-new-campus .container-new-campus{
+        margin: 0 auto;
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        flex-direction: column;
+   }
+
+   .section-new-campus .container-new-campus .text{
+     margin: 10px;
+}
+
+
+.container-inauguration{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+.container-inauguration .card{
+     margin: 50px 0 ;
+}
+
+
+
+.section-infos-links{
+   display: none;
+ }
+
+.section-partenareat{
+     display: none;
+}
+
+.container-footer .logo{
+    flex-wrap:wrap;
+}
+}
